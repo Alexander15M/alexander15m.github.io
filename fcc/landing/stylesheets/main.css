@@ -1,227 +1,313 @@
-/* Element selectors*/
-
-html,body
-{
-    width: 100%;
-    height: 100%;
-    margin: 0px;
-    padding: 0px;
-    overflow-x: hidden; 
+html {
+  scroll-behavior: smooth;
+  color: #444;
 }
 
-h1,h2,h3{
-  text-align:center;
+body {
+  font-size: 20px;
+  font-family: "Raleway", sans-serif;
+  margin: 0px;
+  width: 100%;
+  line-height: 1.4;
 }
 
-h4{
-  margin-left:350px;
+#header {
+  background-color: #30348f;
+  font-family: "Montserrat", sans-serif;
+  font-size: 18px;
+  font-weight: 600;
+  margin-top: -50px;
+  position: fixed;
+  height: 50px;
+  width: 100%;
 }
 
-header{
-background: hsl(192,100%,10%);
-margin: -25px -25px 0px -25px;
-padding: 15px;
+#nav-bar {
+  padding: 15px 0 0 0;
+  float: right;
 }
 
-
-main{
-  
-  background-color:#DDD;
-  margin-left:-30px;
-  margin-right:-30px;
-  padding:10px;
+#header-img {
+  margin: 5px 0 0 10px;
+  width: 300px;
+}
+#nav-ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+#nav-ul > li {
+  display: inline;
+}
+.nav-link {
+  color: #ffda73;
+  padding: 10px;
+  text-decoration: none;
 }
 
-
-ul{
-  text-align:justify;
-  margin-right:100px;
-  margin-left:300px;
-  max-width:900px;
-  padding: 0 0 0 0;}
-
-
-li{
-  margin-bottom:5px;
+.nav-link:hover,
+.nav-link.active {
+  background-color: #ffda73;
+  border-radius: 20px;
+  color: #30348f;
 }
 
-/* Classes */
-.book-image{
-  box-shadow: 0px 0px 10px 5px hsla(0,0%,0%,0.2);
-
+#content {
+  margin-top: 50px;
+  width: 100%;
 }
 
-.book-item{
-     transition: all 0.3s ease;
-   -webkit-transform: scale(.8);
-  -ms-transform: scale(.8);
-  transform: scale(.8);
+#presentation {
+  padding: 10rem 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  background-image: url("https://res.cloudinary.com/dkwgy77j3/image/upload/v1585530623/Freecodecamp/landing-page/jefferson-santos-unsplash-medium_klka1y.jpg");
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+@keyframes fade-in {
+  100% {
+    opacity: 1;
+  }
 }
 
-.book-item:hover{
-  opacity: 0.2;
-  filter: alpha(opacity=20);
-  -webkit-transform: scale(1);
-  -ms-transform: scale(1);
-  transform: scale(1);
+.animation-fade-in {
+  animation-name: fade-in;
+  animation-duration: 0.6s;
+  animation-delay: 0.2s;
+  animation-fill-mode: forwards;
+  opacity: 0;
 }
 
-.center-text{
-  max-width:80%;
-  padding-left:100px;
-  padding-right:50px;
-  text-align:left; width: 100%;
-  margin: 0 auto;
+.presentation-text,
+.presentation-subtext {
+  color: #eee;
+  font-size: 40px;
+  font-family: "Montserrat", sans-serif;
+}
+.presentation-subtext {
+  font-size: 18px;
+  max-width: 30rem;
 }
 
-.container{
-  max-width:auto;
-  display:flex;
+#form {
+  margin-top: 20rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+#email {
+  border: 1px solid transparent;
+  padding: 5px;
+  width: 20rem;
+}
+
+#email:focus {
+  border: 1px solid #aaa;
+}
+
+#submit {
+  background-color: #ffcc40;
+  border: none;
+  border-radius: 10px;
+  color: #30348f;
+  font-weight: 600;
+  margin-top: 5px;
+  padding: 10px;
+  width: 7rem;
+}
+
+#submit:active {
+  position: relative;
+  top: 1px;
+}
+#features {
+  padding-top: 2rem;
+  background-color: rgb(245, 245, 245);
+  padding: 5rem 0;
+}
+#features-title {
+  margin: 0 0 2rem 0;
+  text-align: center;
+}
+
+#features-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+}
+
+.feature-item {
+  border-radius: 10px;
+  box-shadow: 5px 2px 40px 0px #ccc;
+  text-align: center;
+  width: 250px;
+  padding: 5px;
+}
+.feature-item > h4,
+.feature-item > p {
+  margin: 0;
+  margin-top: 5px;
+  padding: 0 14px 0 14px;
+}
+.feature-item > p {
+  text-align: justify;
+}
+#dem-video {
+  background-color: rgb(250, 250, 250);
+  padding-bottom: 3rem;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+#video {
+  box-shadow: 10px 10px 40px 0px #ccc;
+  width: 620px;
+  height: 480px;
+}
+#products {
+  background-color: rgb(245, 245, 245);
+  padding: 1rem;
+}
+#products > h2 {
+  text-align: center;
+}
+
+#products-container {
+  display: flex;
+  align-items: center;
   flex-wrap: wrap;
-  justify-content: space-evenly;
-  row-gap:50px;
+  justify-content: space-around;
+}
+.product-subsection {
+  margin: 0 1.5rem 3rem 1.5rem;
+  display: flex;
+  flex-direction: row;
 }
 
-.gen-text{
-  font-family:'Exo 2';
-  font-size:20px;
+.product-image {
+  border-radius: 10px;
+  box-shadow: 10px 10px 40px 0px gray;
+  max-height: 300px;
 }
-   
-.img-style{
-  display: block;
-  height:auto;
-  max-width:50%;
-  margin:auto;
-  margin-bottom:10px;
-  color:#555;
+.subsection-text-container {
+  width: 200px;
+  margin: 0 5px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
 }
-
-
-.text-aditional{
-  margin-top:30px;
+.sub-text {
+  margin: 0 10px;
 }
-
-.timeline-subtext{
-  border-left:8px solid;   
-  border-color:inherit;
-  color:#0D6980;
-  font-family:'Exo 2';
-  font-size:40px;
-  margin: 0 auto;
-  margin-left: 300px;
-  margin-bottom: 9px;
-  max-width:1200px;
-  padding-left:30px;
+.subsection-title {
+  text-align: center;
+  margin: 0;
+}
+.subsection-description {
+  font-family: "Montserrat", sans-serif;
 }
 
-.timeline-text{
-  color:#002933;
-  font-family:'Lobster';
-  font-size:50px;
-  
+.product-button {
+  background-color: #30348f;
+  border: none;
+  border-radius: 5px;
+  padding: 5px;
+  color: white;
+  width: 100%;
 }
 
-.title1{
-  color:#EEE;
-  font-family:'Lobster';
-  font-size:100px;
+.product-button:active {
+  position: relative;
+  top: 1px;
 }
 
-.separator{
-  padding-top:90px;
+footer {
+  background-color: #30348f;
+  color: white;
+  padding: 10px 0;
+  text-align: center;
+  width: 100%;
+}
+footer > p {
+  margin: 5px 0;
 }
 
-.separator-down{
-  padding-bottom:60px; 
+footer > p > a {
+  text-decoration: none;
+  color: #8a8a8a;
 }
 
-.subtitle1{
-  color:#3A7A8C;
-  font-family:'Exo 2';
-  font-size:40px;
-}
-
-
-/* IDs */
-
-#external,.text-aditional{
-  margin:auto;
-}
-
-#foot{
-  background-color:#DDD;
-  font-family:'Exo 2';
-  font-size:20px;
-  margin-bottom:-50px;
-  margin-left:-5px;
-  padding-top:70px;
-  text-align:center;
-  
-}
-
-
-#tribute-info{
-  margin-top:50px;
-  
-}
-
-#image{
-  box-shadow: 0px 0px 10px 5px hsla(0,0%,0%,0.2);}
-
-@media(max-width:1080px){
-  ul{
-  margin-left:150px;
+@media (max-width: 850px) {
+  #nav-ul > li {
+    font-size: 12px;
   }
-  
-  .center-text{
-    padding-left:50px;
-    margin-right:100px;
+  #header-img {
+    margin-top: 15px;
+    width: 200px;
   }
-  
-  .timeline-subtext{
-    max-width:980px;
-    margin-left:100px;
+
+  #presentation {
+    background-image: url("https://res.cloudinary.com/dkwgy77j3/image/upload/v1585530621/Freecodecamp/landing-page/jefferson-santos-unsplash-small_kdovaj.jpg");
   }
-  
+  #features-container {
+    align-items: center;
+    flex-direction: column;
+  }
+  .feature-item {
+    margin-bottom: 50px;
+  }
+
+  #video {
+    width: 400px;
+    height: 300px;
+  }
+  .presentation-text,
+  .presentation-subtext {
+    font-size: 24px;
+  }
+  .product-image {
+    max-height: 200px;
+  }
+  .subsection-description {
+    font-size: 14px;
+  }
+}
+@media (max-width: 528px) {
+  #header {
+    height: 100px;
+  }
+  #nav-bar {
+    float: none;
+  }
+  #nav-ul {
+    display: flex;
+    justify-content: space-around;
+  }
 }
 
-@media(max-width: 500px){
-  ul{
-     max-width:auto;
-     margin-left:50px; 
-    margin-right:0px;
-  }
-  
-  .center-text{
-    
-     max-width:auto;
-     padding-left:30px;
-  }
-  
-  .timeline-subtext{
-     max-width:auto;
-     margin-left:30px
-  }
-  #foot{
-    margin-left:-10px;
-    margin-right:-30px;    
-  }
-  #foot-text{
-    word-wrap: break-word;
-    text-align:center;
-    padding-bottom:10px
-  }
-  header{
-    margin-right:-30px;
-  }
-  
-  book-item{
-    
-  }
-  
-  .book-item:hover{
-  -webkit-transform: scale(1.1);
-  -ms-transform: scale(1.1);
-  transform: scale(1.1);
-  }
+span.fas {
+  color: #30348f;
+  font-size: 56px;
+}
+span.fa-truck {
+  color: #30348f;
+  font-size: 44px;
+  line-height: 1.25;
+}
+
+.fab {
+  color: #bbb;
+  font-size: 32px;
+  margin: 0 10px;
+}
+
+.fab:hover {
+  color: white;
 }
