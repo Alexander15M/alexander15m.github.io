@@ -1,0 +1,117 @@
+body{
+  background: linear-gradient(0deg, rgba(1, 160, 173, 0.6), rgba(1, 160, 173, 0.6)), url("https://res.cloudinary.com/dkwgy77j3/image/upload/v1582418268/Freecodecamp/survey-form/45064629294_fa6a51fa41_b_dwmbyi.jpg");/*  "https://cdn.pixabay.com/photo/2017/10/30/03/44/space-2901400_960_720.jpg");*/
+  background-size:     cover;                      
+  background-repeat:   no-repeat;
+  background-position: center center; 
+  background-attachment: fixed;
+
+  color:rgb(243,243,243);
+  text-align:center;
+
+
+ 
+}
+form{
+  display:inline-block;
+  text-align:left;
+  margin-left:-50px;
+  width:30%;
+  
+  
+  animation-name:slide;
+  animation-duration:.8s;
+  animation-delay:.2s;
+  animation-fill-mode:forwards;
+  opacity:0;
+}
+
+input{
+  margin-bottom: 20px;
+  padding:10px;
+  padding-left:5px;
+}
+
+
+.input-text{
+  width:100%;
+  box-sizing: border-box;
+}
+
+.first-level-text{
+  font-family: 'Playfair Display';
+}
+.second-level-text{
+  font-family:'Raleway';
+}
+
+input:invalid  {
+  border: 2px solid red;
+}
+
+select:required:invalid {
+  color: gray;}
+
+.animation-fade-in{
+  animation-name:fade-in;
+  animation-duration:.8s;
+  animation-delay:.2s;
+  animation-fill-mode:forwards;
+  opacity:0;
+}
+#submit:hover{
+background-color:rgb(0,128,100);;
+}
+
+#comments{
+  margin-bottom:3%;
+  padding:2%;
+  width:95.3%;
+}
+
+#description{
+  font-family: 'Raleway';
+   font-size:25px;
+}
+
+
+#title{
+  font-family:'Raleway';
+  font-size:50px;
+}
+
+#submit{
+  color:white;
+  background-color:rgb(40,158,130);;
+  border:none;
+  border-radius:3%;
+  height:10%;
+  width:100%;
+  padding:2%;
+}
+#survey-form{
+  background-color:rgba(1, 104, 117, 0.9); 
+  border-radius:2%;
+  padding:2%;
+  font-size:20px;
+}
+
+#number{
+  width:100%;
+  padding:5px;
+  
+}
+
+#footer-text{text-align:center;margin-top:100px}
+
+@keyframes slide{
+  100%{
+    margin-left:0px;
+    opacity:1;
+  }
+}
+
+@keyframes fade-in{
+  100%{
+    opacity:1;
+  }
+}
