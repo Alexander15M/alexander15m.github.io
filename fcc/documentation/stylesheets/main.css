@@ -1,0 +1,11 @@
+.console {
+  background-color: #eee;
+  border-radius: 5px;
+  padding: 10px;
+  display: block;
+  white-space: pre-wrap;
+}
+.ident {
+  display: inline-block;
+  margin-left: 20px;
+}
