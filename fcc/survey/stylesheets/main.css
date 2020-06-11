@@ -16,7 +16,7 @@ form{
   text-align:left;
   margin-left:-50px;
   width:30%;
-  
+  min-width: 300px; 
   
   animation-name:slide;
   animation-duration:.8s;
@@ -40,6 +40,10 @@ input{
 .first-level-text{
   font-family: 'Playfair Display';
 }
+.first-level-text > label {
+  display: block;
+}
+
 .second-level-text{
   font-family:'Raleway';
 }
