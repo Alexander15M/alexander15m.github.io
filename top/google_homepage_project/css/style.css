@@ -80,11 +80,13 @@ body {
     padding: 11px 20px;
     width: 500px;
 }
-#search-box {
-    border: none;
-    margin-left: 10px;
-    width: 100%;
+
+.search-bar:hover{
+    background-color: #fff;
+    box-shadow: 0 1px 6px rgba(32,33,36,.28);
+    border-color: rgba(223,225,229,0);
 }
+
 .search-bar > svg{
     color: #9aa0a6;
     fill: currentColor;
@@ -93,6 +95,12 @@ body {
     width: 20px;
     margin-top: -3px;
     margin-left: -5px;
+}
+
+#search-box {
+    border: none;
+    margin-left: 10px;
+    width: 100%;
 }
 
 .search-buttons-container{
